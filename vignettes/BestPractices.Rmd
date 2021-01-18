@@ -132,7 +132,7 @@ Do not use `ee.Algorithms.If()` to implement branching logic, especially in a ma
 &nbsp; **Bad** — Don't use `If()`:
 
 ```{r}
-table <- ee.FeatureCollection('USDOS/LSIB_SIMPLE/2017')
+table <- ee$FeatureCollection('USDOS/LSIB_SIMPLE/2017')
 
 # Do NOT do this!
 veryBad = table$map(function(f) {
@@ -246,7 +246,7 @@ Map$addLayer(mask, {}, 'mask', FALSE)
 badMask <- image$mask(mask)
 Map$addLayer(badMask, vis, "badMask")
 
-goodMask <- image.updateMask(mask)
+goodMask <- image$updateMask(mask)
 Map$addLayer(goodMask, vis, "goodMask", FALSE)
 ```
 
